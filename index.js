@@ -3,6 +3,10 @@ const config = require('./app.config');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.get('/check-text', async (req, res) => {
     // Use URL from query parameter if provided, otherwise fallback to config
     const targetUrl = req.query.url || config.target_url;
