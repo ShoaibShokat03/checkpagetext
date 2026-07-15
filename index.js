@@ -39,7 +39,7 @@ app.get('/check-text', async (req, res) => {
             return res.json({ success: true, message: 'Text found and notification sent!' });
         }
 
-        return res.json({ success: true, message: 'Text not found.' });
+        return res.json({ success: true, message: `[${config.target_text}]Text not found.` });
 
     } catch (error) {
         console.error('Error fetching webpage:', error);
