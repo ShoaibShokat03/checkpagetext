@@ -48,6 +48,6 @@ app.get('/check-text', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
-    console.log(`Test by visiting: http://localhost:${port}/check-password`);
+    console.log(`Server listening on port ${port}`);
+    console.log(`Trigger a check by visiting: /check-text`);
 });
