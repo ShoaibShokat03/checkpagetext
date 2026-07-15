@@ -1,0 +1,11 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Optional: friendly URL -> redirects /check-text to the function
+[[redirects]]
+  from = "/check-text"
+  to = "/.netlify/functions/check-text"
+  status = 200
